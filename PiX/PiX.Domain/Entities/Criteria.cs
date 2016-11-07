@@ -13,5 +13,6 @@ namespace PiX.Domain.Entities
 
         //Navigation properties
         public Category Category { get; set; }
+        public static int votes { get; set; }
     }
 }
