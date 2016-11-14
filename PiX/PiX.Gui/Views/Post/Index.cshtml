@@ -1,0 +1,35 @@
+﻿@model IEnumerable<PiX.Gui.Models.Post.PostModels>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<h6 style="color:red;">@ViewBag.msg</h6>
+@using (Html.BeginForm())
+{     <table>
+        <tr>
+            <td>
+                <div>
+                    Search by Title: @Html.TextBox("searchString")
+
+                </div>
+            </td>
+            <td>                 
+                <input type="submit"  @((ViewBag.empty ==true) ? "disabled" : "") value="Search" id="submit" class="btn btn-default" />
+            </td>
+        </tr>
+    </table> }
+
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        @Html.Partial("_PostBox", item);
+    }
+}
+

@@ -15,8 +15,13 @@ namespace PiX.Gui.Controllers
     [Authorize]
     public class AccountController : Controller
     {
+        #region member vars
+
+        private MyUserManager _userManager;
+
+        #endregion
         private ApplicationSignInManager _signInManager;
-        private ApplicationUserManager _userManager;
+        private ApplicationUserManager _userManager2;
 
         public AccountController()
         {

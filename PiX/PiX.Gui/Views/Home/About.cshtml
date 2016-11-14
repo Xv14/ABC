@@ -1,7 +1,12 @@
 ﻿@{
     ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_TemplateUser.cshtml";
 }
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<section class="video">
+    <img src="@Url.Content("~/Content/templateUser/")img/video_logo.png" alt="" class="video_logo animated wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
+    <h3 class="animated wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">who we are &amp; what we do</h3>
+    <a href="https://www.youtube.com/watch?v=hamWPdqOBwE" id="play_btn" class="fancybox animated wow flipInX animated" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: flipInX;"></a>
+</section>
